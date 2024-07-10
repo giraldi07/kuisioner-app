@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f3f4f6; /* Tailwind's bg-gray-100 */
+  padding: 1rem; /* Added padding for mobile */
+}
+
+.card {
+  display: flex;
+  flex-direction: column; /* Adjusted for mobile */
+  align-items: center;
+  background-color: #ffffff; /* Tailwind's bg-white */
+  padding: 1.5rem; /* Tailwind's p-6 */
+  border-radius: 0.5rem; /* Tailwind's rounded-lg */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Tailwind's shadow-lg */
+  max-width: 36rem; /* Adjust width as needed */
+  width: 100%; /* Tailwind's w-full */
+  gap: 1rem; /* Space between image and text */
+}
+
+.image {
+  width: 12rem; /* Adjust width as needed */
+  height: 12rem; /* Adjust height as needed */
+  flex-shrink: 0; /* Prevent image from shrinking */
+  margin-bottom: 1rem; /* Tailwind's mb-4 */
+}
+
+.content {
+  text-align: center; /* Center text on mobile */
+}
+
+.title {
+  font-size: 1.875rem; /* Tailwind's text-3xl */
+  font-weight: 700; /* Tailwind's font-bold */
+  margin-bottom: 1rem; /* Tailwind's mb-4 */
+}
+
+.text {
+  color: #4b5563; /* Tailwind's text-gray-700 */
+  margin-bottom: 1rem; /* Tailwind's mb-4 */
+}
+
+.link {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: #3b82f6; /* Tailwind's bg-blue-500 */
+  color: #ffffff; /* Tailwind's text-white */
+  padding: 0.5rem; /* Tailwind's py-2 */
+  border-radius: 0.5rem; /* Tailwind's rounded-lg */
+  transition: background-color 0.3s; /* Tailwind's transition duration-300 */
+}
+
+.link:hover {
+  background-color: #2563eb; /* Tailwind's hover:bg-blue-600 */
+}
+
+@media (min-width: 640px) {
+  .card {
+    flex-direction: row; /* Switch to horizontal layout on larger screens */
+    align-items: center;
+  }
+
+  .image {
+    margin-bottom: 0; /* Remove bottom margin on larger screens */
+    margin-right: 1rem; /* Add right margin between image and text */
+  }
+}
